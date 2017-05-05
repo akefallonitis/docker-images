@@ -21,6 +21,6 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
 
 EXPOSE 514 514/udp
 
-VOLUME [ "/etc/rsyslog.d" ]
+VOLUME [ "/var/log", "/etc/rsyslog.d" ]
 
 ENTRYPOINT [ "rsyslogd", "-n", "-f", "/etc/rsyslog.conf", "-i", "/tmp/rsyslog.pid" ]
