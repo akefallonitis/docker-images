@@ -5,10 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -yq --no-install-recommends \
         rsyslog \
         rsyslog-elasticsearch \
-        rsyslog-hiredis \
-    && \
-    echo 'global(processInternalMessages="off")' > /etc/rsyslog.conf && \
-    echo '$IncludeConfig /etc/rsyslog.d/*.conf' >> /etc/rsyslog.conf
+        rsyslog-hiredis 
 
 EXPOSE 514 514/udp
 
