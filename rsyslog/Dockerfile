@@ -11,7 +11,8 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     apt-get update && apt-get -t jessie-backports install -yq --no-install-recommends \
         rsyslog-hiredis \
     && \
-    update-rc.d redis-server defaults
+    update-rc.d redis-server defaults && \
+    update-rc.d redis-server enable
 
 
 EXPOSE 514 514/udp 6379
