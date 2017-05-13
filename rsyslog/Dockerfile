@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list.d/jessie-backports.list && \ 
     apt-get update && apt-get -t jessie-backports install -yq --no-install-recommends \
         rsyslog-hiredis
-  
+
+CMD ["redis-server", "/etc/redis/redis.conf"]
 EXPOSE 514 514/udp 6379
 
 VOLUME [ "/var/log", "/etc/rsyslog.d" ]
