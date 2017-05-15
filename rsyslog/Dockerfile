@@ -7,9 +7,6 @@ RUN echo "deb http://ftp.us.debian.org/debian unstable main contrib non-free" >>
         rsyslog \
         rsyslog-elasticsearch \
         redis-server \
-    && \
-    echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list.d/jessie-backports.list && \ 
-    apt-get update && apt-get -t jessie-backports install -yq --no-install-recommends \
         rsyslog-hiredis 
 
 
