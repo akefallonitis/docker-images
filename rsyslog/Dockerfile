@@ -9,7 +9,7 @@ RUN echo "deb http://ftp.us.debian.org/debian unstable main contrib non-free" >>
         rsyslog-hiredis 
 
 
-EXPOSE 514 514/udp 6379
+EXPOSE 514 514/udp
 
 VOLUME [ "/var/log", "/etc/rsyslog.d" ]
 
