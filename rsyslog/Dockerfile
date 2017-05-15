@@ -6,7 +6,6 @@ RUN echo "deb http://ftp.us.debian.org/debian unstable main contrib non-free" >>
     apt-get update && apt-get install -yq --no-install-recommends \
         rsyslog \
         rsyslog-elasticsearch \
-        redis-server \
         rsyslog-hiredis 
 
 
