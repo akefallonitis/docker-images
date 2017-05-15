@@ -10,10 +10,7 @@ RUN echo "deb http://ftp.us.debian.org/debian unstable main contrib non-free" >>
     && \
     echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list.d/jessie-backports.list && \ 
     apt-get update && apt-get -t jessie-backports install -yq --no-install-recommends \
-        rsyslog-hiredis \
-    && \
-    update-rc.d redis-server defaults && \
-    update-rc.d redis-server enable
+        rsyslog-hiredis 
 
 
 EXPOSE 514 514/udp 6379
